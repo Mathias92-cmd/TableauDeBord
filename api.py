@@ -7,7 +7,9 @@ def get_rates(currencies , days=30):
     end_date = date.today()
     start_date = end_date - timedelta(days=days)
 
-    r = requests.get(f"https://www.docstring.fr/api/rates/history/?start_at={start_date}&end_at={end_date}&symbols={','.join(currencies)}")
+    join = ','.join(currencies)
+    requete = f"https://www.docstring.fr/api/rates/history/?start_at={start_date}&end_at={end_date}&symbols={join}"
+    r = requests.get(requete)
     if not r and not r.json():
         return False, False
 

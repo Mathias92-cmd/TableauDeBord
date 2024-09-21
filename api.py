@@ -13,6 +13,7 @@ def get_rates(currencies , days=30):
 
     api_rates = r.json().get("rates")
     pprint(api_rates)
+    return None, None
 
 
 if __name__ == '__main__':

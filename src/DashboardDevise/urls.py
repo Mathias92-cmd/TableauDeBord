@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from devise.views import dashboard
+
 urlpatterns = [
+    path("" , dashboard),
     path('admin/', admin.site.urls),
 ]
+
+

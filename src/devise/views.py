@@ -11,4 +11,5 @@ def dashboard(request, days_range=60 , currencies="USD"):
 
     return render(request, "devise/index.html" , context={"data": rates ,
                                                                         "days_labels": days ,
+                                                                        "currencies": currencies,
                                                                         "page_label": page_label})

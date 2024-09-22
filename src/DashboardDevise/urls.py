@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from setuptools.extern import names
 
 from devise.views import dashboard
 
 urlpatterns = [
     path('', dashboard, name='home'),
-    path("days=<int:days_range>&currencies=<str:currencies>" , dashboard),
+    path("days=<int:days_range>&currencies=<str:currencies>" , dashboard, name='home'),
     path('admin/', admin.site.urls),
 ]
 

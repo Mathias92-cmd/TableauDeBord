@@ -9,6 +9,11 @@
 <body class="bg-dark">
 
     <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-white">Tableau de bord - {{ page_label }} </h1>
+            </div>
+        </div>
         <div class="row justify-content-center">
             {% for currency , rates in data.items %}
             <div class="col-md-10 col-lg-6">

@@ -18,12 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from setuptools.extern import names
 
-from devise.views import dashboard , redirect
+from devise.views import dashboard , custom_redirect
 
 urlpatterns = [
-    path("", redirect),
-    path('', dashboard, name='home'),
-    path("days=<int:days_range>&currencies=<str:currencies>", dashboard, name='dashboard'),
+    path("", custom_redirect, name="redirect"),
+    path('dashboard/', dashboard, name='home'),
+    path('days=<int:days_range>&currencies=<str:currencies>/', dashboard, name='dashboard_with_params'),
     path('admin/', admin.site.urls),
 ]
 

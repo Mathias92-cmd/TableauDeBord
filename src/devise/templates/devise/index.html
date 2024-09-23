@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col">
                 <h1 class="text-white">Tableau de bord - {{ page_label }} </h1>
-                <a href="{% url 'home' days_range=7 currencies=currencies %}" class="btn {% if page_label == 'Semaine' %} btn-info {% else %}btn-secondary{% endif %}">Semaine </a>
-                <a href="{% url 'home' days_range=30 currencies=currencies %}" class="btn {% if page_label == 'Mois' %} btn-info {% else %}btn-secondary{% endif %}">Mois </a>
-                <a href="{% url 'home' days_range=365 currencies=currencies %}" class="btn {% if page_label == 'Année' %} btn-info {% else %}btn-secondary{% endif %}">Année </a>
+                <a href="{% url 'dashboard_with_params' days_range=7 currencies=currencies %}" class="btn {% if page_label == 'Semaine' %} btn-info {% else %}btn-secondary{% endif %}">Semaine </a>
+                <a href="{% url 'dashboard_with_params' days_range=30 currencies=currencies %}" class="btn {% if page_label == 'Mois' %} btn-info {% else %}btn-secondary{% endif %}">Mois </a>
+                <a href="{% url 'dashboard_with_params' days_range=365 currencies=currencies %}" class="btn {% if page_label == 'Année' %} btn-info {% else %}btn-secondary{% endif %}">Année </a>
             </div>
         </div>
         <div class="row justify-content-center">
